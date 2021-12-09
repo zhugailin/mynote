@@ -1,0 +1,5 @@
+export http_proxy=socks5://192.168.57.198:10808
+export https_proxy=socks5://192.168.57.198:10808
+
+export -n ##查看代理
+export -p http_proxy ##清除代理
