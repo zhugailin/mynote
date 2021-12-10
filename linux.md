@@ -5,7 +5,7 @@ export https_proxy=socks5://192.168.57.198:10808
 export -p                   ##查看代理
 export -n http_proxy        ##清除代理
 ```
-    
+
     export [参数]
         -f：指向函数。
         -n：删除变量的导出属性。
@@ -101,11 +101,6 @@ cd detectron2
 python setup.py build develop
 ```  
 </details>
-
-## <div align="center">杂烩</div>
-
-bytes, str, int, hex之间的转换: https://blog.csdn.net/xuzhexing/article/details/90766651
-
 
 ## <div align="center">Docker</div>
 <details close>
@@ -245,7 +240,7 @@ git stash # 暂存
 ```
 </details>
 
-## <div align="center">杂烩</div>
+## <div align="center">其他命令</div>
 screen的使用
   
 ```bash
@@ -277,5 +272,7 @@ cat /proc/cpuinfo| grep "processor"| wc -l
 ## 查看物理核数量
 cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 ```
+
+bytes, str, int, hex之间的转换: https://blog.csdn.net/xuzhexing/article/details/90766651
 
 
