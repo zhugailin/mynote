@@ -22,9 +22,13 @@
       
 ```
 cd /data/home/zgl/yolov5_edgetpu/yolov5
+
 python export.py --weight yolov5l.pt --include tflite –int8 –imgz 224 224  ##输出默认的640在执行edgetpu_compiler yolov5l-int8.tflite编译时会报错
+
 edgetpu_compiler yolov5l-int8.tflite (编译问题可以参考链接：https://coral.ai/docs/edgetpu/compiler/#compiler-and-runtime-versions  
+
 cd /coral/flask_triton/pycoral/flask_edgetpu
+
 python detect_demo.py
  ```
 
