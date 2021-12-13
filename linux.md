@@ -1,7 +1,10 @@
-# linux终端配置网络代理
+## <div align="center">linux终端配置网络代理</div> 
+<details close>
+<summary>export命令</summary>
+
 ```
-export http_proxy=socks5://192.168.57.198:10808
-export https_proxy=socks5://192.168.57.198:10808
+export http_proxy=socks5://192.168.57.1:10808
+export https_proxy=socks5://192.168.57.1:10808
 export -p                   ##查看代理
 export -n http_proxy        ##清除代理
 ```
@@ -12,7 +15,43 @@ export -n http_proxy        ##清除代理
         -p：显示全部拥有导出属性的变量。
         -pf：显示全部拥有导出属性的函数。
         -nf：删除函数的导出属性。
-        
+</details>
+
+## <div align="center">GIT</div>
+<details close>
+<summary>git命令</summary>
+环境配置
+  
+```bash
+## 生成密钥
+ssh-keygen -t rsa -C "yuanhui@ut.cn"
+```
+git常用命令
+  
+```bash
+git commit -m "" # 提交更新 
+## 新建分支并 进入分支
+{git branch bugFix; git checkout bagFix; git commit} = {git checkout -b bugFix}
+git merge bugFix # 合并分支
+git rebase main # 顺序合并分支
+## 移动HEAD
+git checkout HEAD^ ;  git checkout HEAD~4 ; git branch -f main HEAD~3
+## 从远程仓库提取数据
+git fetch # 将log提取下来，本地库代码不变
+## 直接更新本地库
+git pull = {git fetch; git merge o/main)
+## 远程库添加伪提交
+git fakeTeamwork foo 3
+```
+git 实练命令
+  
+```bash
+git tag \ # 查看tag
+    --contains 11528ce083dc9ff83ee3a8f908  # 查看包含此提交的tag
+git stash # 暂存
+```
+</details>
+
 ## <div align="center">配置环境</div>
 <details close>
 <summary>conda</summary>
@@ -205,41 +244,6 @@ sudo systemctl restart docker
 ```
 </details>
 
-## <div align="center">GIT</div>
-<details close>
-<summary>git命令</summary>
-环境配置
-  
-```bash
-## 生成密钥
-ssh-keygen -t rsa -C "yuanhui@ut.cn"
-```
-git常用命令
-  
-```bash
-git commit -m "" # 提交更新 
-## 新建分支并 进入分支
-{git branch bugFix; git checkout bagFix; git commit} = {git checkout -b bugFix}
-git merge bugFix # 合并分支
-git rebase main # 顺序合并分支
-## 移动HEAD
-git checkout HEAD^ ;  git checkout HEAD~4 ; git branch -f main HEAD~3
-## 从远程仓库提取数据
-git fetch # 将log提取下来，本地库代码不变
-## 直接更新本地库
-git pull = {git fetch; git merge o/main)
-## 远程库添加伪提交
-git fakeTeamwork foo 3
-```
-git 实练命令
-  
-```bash
-git tag \ # 查看tag
-    --contains 11528ce083dc9ff83ee3a8f908  # 查看包含此提交的tag
-git stash # 暂存
-```
-</details>
-
 ## <div align="center">其他命令</div>
 screen的使用
   
@@ -275,4 +279,13 @@ cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 
 bytes, str, int, hex之间的转换: https://blog.csdn.net/xuzhexing/article/details/90766651
 
+## <div align="center">格式</div> 
+<details close>
+<summary>小标题</summary>
+
+```bash
+## 注释
+code
+```
+</details>
 
