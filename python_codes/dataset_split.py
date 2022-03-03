@@ -1,5 +1,5 @@
 """
-将数据集按80%train和20%val的比例分配。python dataset_split.py --dir /data/home/zgl/datasets/pp_smoke/ppsmoke
+将数据集按80%train和20%val的比例分配。python dataset_split.py --dir /data/home/zgl/datasets/robot
 文件结构
 ├── images #存放图片
 ├── labels
@@ -20,9 +20,12 @@ parser.add_argument(
 args, unparsed = parser.parse_known_args()
 
 data_path = args.dir #数据根目录
+print(data_path)
 
 ## 断言文件夹中必须包含classes.txt, voc.yaml, yolov5_model.yaml这三个文件夹
 name_ = os.path.basename(data_path)
+# print(name_)
+# name_='robot'
 classes_file = os.path.join(data_path, "classes.txt")
 data_file = os.path.join(data_path, "voc_" + name_ + ".yaml")
 model_file = os.path.join(data_path, "yolov5_model_" + name_ + ".yaml")
