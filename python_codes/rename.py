@@ -6,16 +6,16 @@
 from operator import ne
 import os
 # path = 'D:\\datasets\测试文件\\测试文件\\'
-path = 'D:\datasets\悬浮物2\obj_train_data\\'
+path = 'E:\\share\\datasets\\dxg\\dxg2\\'
 # 获取该目录下所有文件，存入列表中
 files= os.listdir(path)
-n = 0.5
-new_name = '_'
+n = 1
+new_name = 'dxg2'
 for allnamejpg in files:
-    n += 0.5
+    n += 1
     # if(allnamejpg[-4:])=='.JPG' or (allnamejpg[-4:])=='.jpg' and allnamejpg[0:3]!='img': 
-    if ((allnamejpg[-4:])=='.JPG' or (allnamejpg[-4:])=='.jpg' ): #判断是jpg/JPG/png结尾的图片
-    # if (allnamejpg[-4:]) in (".jpg",".JPG",".png",".PNG",".bmp","jpeg"):
+    # if ((allnamejpg[-4:])=='.JPG' or (allnamejpg[-4:])=='.png' ): #判断是jpg/JPG/png结尾的图片
+    if (allnamejpg[-4:]) in (".jpg",".JPG",".png",".PNG",".bmp","jpeg"):
         length=len(allnamejpg)
         name = allnamejpg[:-4] # #截取从头开始到倒数第四个字符之前
         oldnamejpg=path+allnamejpg

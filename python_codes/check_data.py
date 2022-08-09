@@ -1,3 +1,5 @@
+"检查文件夹下文件命名是否有乱码"
+
 from asyncore import file_dispatcher
 import os
 
@@ -13,16 +15,6 @@ for root, dirs, files in os.walk(save_dir):
             os.rename(os.path.join(root, file_name), os.path.join(save_dir,file_name))
 print("无法编码的数量为：",count)
 
-
-# a= ['ding.jpg','\udcc6\dhfk.jpg']
-# count = 0 
-# for i in a:
-#     print(type(i))
-#     try:
-#         i.encode()
-#     except:
-#         count += 1
-#         print(count)
 
 
 

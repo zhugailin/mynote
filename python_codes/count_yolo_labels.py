@@ -1,7 +1,7 @@
 import os
 import collections #统计模块
 
-in_path = r"/data/home/zgl/datasets/ut_hxq_process/labels"
+in_path = r"E:\share\\datasets\\data_yunnan\\images\\cut"
 
 def read_txt(in_path):
     classNum = []
@@ -17,6 +17,6 @@ def read_txt(in_path):
             else:
                 continue
         num = collections.Counter(classNum)
-        print(list(num))
+        print(num)
 
 read_txt(in_path)
