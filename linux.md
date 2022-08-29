@@ -7,6 +7,7 @@ export http_proxy=socks5://192.168.57.1:10808
 export https_proxy=socks5://192.168.57.1:10808
 export -p                   ##查看代理
 export -n http_proxy        ##清除代理
+
 ```
 
     export [参数]
@@ -16,6 +17,19 @@ export -n http_proxy        ##清除代理
         -pf：显示全部拥有导出属性的函数。
         -nf：删除函数的导出属性。
 </details>
+
+```
+Windows
+C:\User\用户目录下，新建pip文件夹，然后在该文件夹下新建pip.ini文件
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+proxy     = http://XXXX.com:port
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+pip
+
+pip install -r requirements.txt --proxy=代理服务器IP:端口号
+```
 
 ## <div align="center">GIT</div>
 <details close>
